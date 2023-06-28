@@ -18,5 +18,5 @@ class YourMod(loader.Module):
     async def rollcmd(self, message):
         """Roll random number. Syntax: .roll [min number] [max number]"""
         logger.debug("rolled number")
-        x = message.split(" ")
+        x = message.text.split(" ")
         await utils.answer(message, random.randrange(x[1],x[2]))
